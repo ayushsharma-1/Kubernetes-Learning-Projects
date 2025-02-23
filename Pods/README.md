@@ -41,7 +41,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```sh
 kubectl version --client
 ```
-(Add an image here: `/assets/version.png`)
+![kubectl version](./assets/version.png)
 
 ---
 
@@ -52,7 +52,7 @@ Refer to the [Minikube documentation](https://minikube.sigs.k8s.io/docs/start/?a
 ```sh
 minikube start
 ```
-(Add an image here: `minikube-start.png`)
+![Minikube start](./assets/minikube-start.png)
 
 #### Interact with the Cluster:
 ```sh
@@ -89,7 +89,7 @@ docker run -d nginx:14.2 --name nginx -p 80:80
 kubectl create -f nginx-pod.yaml
 kubectl apply -f nginx-pod.yaml
 ```
-(Add an image here: `kubectl-apply-pod.png`)
+![kubectl apply pod](./assets/kubectl-apply-pod.png)
 
 If you encounter an issue where your Nginx pod is stuck in `ContainerCreating` status, it means Kubernetes is trying to start the container, but something is preventing it from running properly. Follow the steps below to troubleshoot.
 
@@ -132,7 +132,7 @@ kubectl create -f nginx-pod.yaml
 kubectl get pods
 kubectl get pods -o wide
 ```
-The IP shown is assigned by `kube-proxy`.
+![Pod IP](./assets/Ip.png)
 
 ### Checking the Running Pod
 ```sh
@@ -152,6 +152,3 @@ kubectl describe pod nginx
 To convert a Pod into a Deployment, modify the YAML file and change the `kind` field from `Pod` to `Deployment`. Deployments provide automatic scaling and self-healing capabilities.
 
 **⚠️ Note:** Running Kubernetes in cloud environments may generate **large cloud bills** due to resource provisioning.
-
----
-
