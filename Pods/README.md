@@ -139,6 +139,7 @@ kubectl get pods -o wide
 minikube ssh
 curl <pod_ip>
 ```
+![Minikube SSH](./assets/ssh.png)
 
 ### Debugging & Logs
 ```sh
