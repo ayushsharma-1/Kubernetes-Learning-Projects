@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: binit-config
+  namespace: default
+data:
+  MAIN_WEBSITE_URL: "https://binit.site"
+  ADMIN_DASHBOARD_URL: "https://admin.binit.site"
+  ADMIN_LOGIN_ID: "your_admin_id"
+  ADMIN_PASSWORD: "your_admin_password"

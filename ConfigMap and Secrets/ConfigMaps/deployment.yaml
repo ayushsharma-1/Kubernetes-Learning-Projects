@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: binit-deployment
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: binit
+  template:
+    metadata:
+      labels:
+        app: binit
+    spec:
+      containers:
+        - name: binit-container
+          image: nginx 
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: binit-config
